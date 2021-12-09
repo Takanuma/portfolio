@@ -1,0 +1,109 @@
+@media screen and (min-height: 0px) {
+	/* 0px以上に適用されるCSS（スマホ用） */
+    #wrapper{
+        justify-content:baseline;
+    }
+}
+@media screen and (min-height: 550px) {
+	/* 550px以上に適用されるCSS（その他用） */
+    #wrapper{
+        justify-content:center;
+        margin-bottom:0px;
+    }
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(back.jpg);
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+header{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 100;
+}
+.link-text{
+    font-size: 17px;
+    font-weight: 100;
+}
+#logo-text{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size:30px;
+}
+
+#view-clock{
+    font-family: 'Noto Serif', serif;
+    font-size: 15px;
+}
+
+#main-li{
+    text-align-last: justify;
+}
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+#Content-container{
+    display:flex;
+    flex-direction: column;
+    padding: 50px;
+    color:whitesmoke;
+    align-items:center;
+
+    transform: translate(0%, 0%);
+}
+
+
+nav{
+    padding-left: 0px;
+}
+
+#main-nav{
+    margin-bottom: 33px;
+    display: block;
+    box-sizing: border-box;
+    flex-wrap:wrap;
+}
+
+#main-nav ul li {
+    width: 100%;
+    height: 100%;
+    /*border:1px solid rgb(255, 255, 255);*/
+
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    display:block;
+    text-decoration: none;
+    border-radius: 1px;
+    color: inherit;
+    padding:10px 3px;
+    text-align: left;
+}
+
+nav ul li a:hover{
+    list-style-type: none;
+    background-color: rgb(207, 0, 0);
+}
