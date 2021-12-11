@@ -1,8 +1,139 @@
+@media screen and (max-width: 700px) {
+	/* 300px以上に適用されるCSS（スマホ用） */
+    #wrapper{
+        justify-content:baseline;
+    }
+    .menu-item {
+        display: none;
+    }
+    
+#hamburger {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 25px;
+    margin: 0 0 0 auto;
+ }
+
+ #hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-50%);
+ }
+ #hamburger::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background-color: #fff;
+ }
+ #hamburger::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background-color: #fff;
+ }
+ .sp-nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+ }
+ .sp-nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+ }
+ .sp-nav li {
+    margin: 0;
+    padding: 0;
+ }
+ .sp-nav li span {
+    font-size: 15px;
+    color: #fff;
+ }
+ .sp-nav li a, .sp-nav li span {
+    display: block;
+    padding: 20px 0;
+ }
+ /*基準となるli要素*/
+.sp-nav .close {
+    position: relative;
+    padding-left: 20px;
+ }
+ /*バツ印線1*/
+ .sp-nav .close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( 45deg );
+ }
+ /*バツ印線2*/
+ .sp-nav .close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( -45deg );
+ }
+}
+
+@media screen and (min-width: 700px) {
+	/* 300px以上に適用されるCSS（スマホ用） */
+    #wrapper{
+        justify-content:baseline;
+    }
+    .menu-item {
+        list-style: none;
+        display: inline-block;
+        padding-right:50px;
+        padding: 10px;
+        font-size:15px;
+        opacity: 0px;
+    }
+
+
+}
+
 @media screen and (min-height: 0px) {
 	/* 0px以上に適用されるCSS（スマホ用） */
     #wrapper{
         justify-content:baseline;
     }
+
+
 }
 @media screen and (min-height: 550px) {
 	/* 550px以上に適用されるCSS（その他用） */
@@ -10,6 +141,46 @@
         justify-content:center;
         margin-bottom:0px;
     }
+
+}
+
+/*ヘッダーのcss*/
+header {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+   
+.title-header {
+    margin-right: auto;
+    font-family: 'Hachi Maru Pop', cursive;
+    color: white;
+    font-size:20px;
+    margin-left:10px;
+}
+   
+
+span{
+    display: none;
+}
+a{
+    display:block;
+    text-decoration: none;
+    border-radius: 1px;
+    color: white;
+    padding:10px 3px;
+    text-align: left;
+}
+
+ 
+/*ヘッダーのcss*/
+
+/*フッターのcss*/
+/*フッターのcss*/
+
+li{
+    font-family: 'Hachi Maru Pop', cursive;
 }
 
 *{
@@ -25,7 +196,7 @@ body{
     position: relative;
 }
 
-header{
+#title{
     text-align:center;
     margin-bottom:80px;
 }
@@ -39,12 +210,12 @@ h2{
     font-weight: 100;
 }
 #logo-text{
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Hachi Maru Pop', cursive;
     font-size:30px;
 }
 
 #view-clock{
-    font-family: 'Noto Serif', serif;
+    font-family: 'Hachi Maru Pop', cursive;
     font-size: 15px;
 }
 
@@ -54,8 +225,8 @@ h2{
 #wrapper{
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    /*width: 100vw;*/
+    /*height: 100vh;*/
     align-items: center;
 }
 

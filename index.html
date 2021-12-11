@@ -8,20 +8,25 @@
     <title>ポートフォリオ</title>
     <link rel="stylesheet" href="main.css">
     <script type="text/javascript" src="clock.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;900&family=Noto+Serif&display=swap" rel="stylesheet">
-<body>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+JP:wght@100;900&family=Noto+Serif&display=swap" rel="stylesheet">
+    <body>
+
+    <header>
+    </header>
+
     <div id="wrapper" class="fade-out">
         <div id="Content-container" class="link-text">
-            <header>
+            <div id="title">
                 <h1 id="logo-text" class=fade-in-title>ポートフォリオ</h1>
                 <h2 id="view-clock" class=fade-in-clock>Clock</h2>
-            </header>
+            </div>
 
             <nav id="main-nav">
                 <ul id="main-li">
-                    <li class="fade-in-li1"><a href=index.html>News</a></li>
+                    <li class="fade-in-li1"><a href=news.html>News</a></li>
                     <li class="fade-in-li2"><a href=https://github.com/Takanuma/portfolio>GitHub</a></li>
                     <li class="fade-in-li3"><a href=index.html>Games</a></li>
                     <li class="fade-in-li4"><a href=index.html>NO CONTENT</a></li>
@@ -34,3 +39,10 @@
 </body>
 
 </html>
+
+<script>
+    $(function(){
+    $.ajaxSetup({cache:false});
+    $("header").load("header.html");
+});
+</script>
