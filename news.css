@@ -1,8 +1,36 @@
 body{
-    background-image: url(https://raw.githubusercontent.com/Takanuma/portfolio/main/back.webp);
-    background-color: rgb(0, 0, 0);
-    background-size: cover;
-    width: 100%;
+    background-color:white;
+    background-size:auto;
+    background-repeat:no-repeat;
     height: 100%;
     position: relative;
 }
+h3{
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+.item{
+
+    padding: 20px;
+      flex-shrink: 0;
+      flex-basis: auto;
+    margin: 10px;
+}
+
+.item-img{
+    transition:0.1s;
+    border:2px solid rgb(0, 0, 0);
+    width:300px;
+    height:250px;
+    object-fit:cover;
+}
+
+.item-img:hover{
+    transition:0.2s;
+    transform:translate(-2%, -2%);
+    box-shadow: 5px 5px rgb(100, 100, 100);
+  }

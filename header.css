@@ -1,5 +1,5 @@
 /*ヘッダーのcss*/
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 760px) {
 	/* 300px以上に適用されるCSS（PC用） */
 .menu-item {
         list-style: none;
@@ -9,139 +9,138 @@
         font-size:15px;
         opacity: 0px;
 }
+nav{
+  display: none;
+}
 
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
 	/* 700px以上に適用されるCSS（スマホ用） */
 .menu-item {
-        display: none;
+  display: none;
 }
 
-
-
+/*　ハンバーガーボタン　*/
+.menu{
+  font-family: 'Hachi Maru Pop', cursive;
+  color:white;
+  font-size:40px;
+}
 .hamburger {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 25px;
-    margin: 0 0 0 auto;
- }
-
-.hamburger span {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    display: block;
-    width: 60%;
-    height: 2px;
-    background-color: #fff;
-    transform: translateY(-50%);
- }
-.hamburger::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-    height: 2px;
-    background-color: #fff;
- }
-.hamburger::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60%;
-    height: 2px;
-    background-color: #fff;
- }
- /*
- .sp-nav {
-    z-index: 1;
+    display : block;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: block;
-    width: 100%;
-    background: rgba(0, 0, 0, .8);
-    transition: all .2s ease-in-out;
-    opacity: 0;
-    transform: translateY(-100%);
- }
- .sp-nav ul {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
- }
- .sp-nav li {
-    margin: 0;
-    padding: 0;
- }
- .sp-nav li span {
-    font-size: 15px;
-    color: #fff;
- }
- .sp-nav li a, .sp-nav li span {
-    display: block;
-    padding: 20px 0;
- }
- */
- /*基準となるli要素
-.sp-nav .close {
-    position: relative;
-    padding-left: 20px;
- }*/
- /*バツ印線1
- .sp-nav .close::before {
-    content: '';
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
     position: absolute;
-    top: 50%;
-    left: 0;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : rgb(0, 0, 0);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #000;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: left;
+    transform: translateX(100%);
+    transition: ease-in-out 0.2s;
+    width: 100%;
+    height:100%;
+  }
+  
+  nav.globalMenuSp ul {
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    font-family: 'Hachi Maru Pop', cursive;
+    padding-left: 15px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :rgba(0, 0, 0, 0.5);
+  }
+  
+  nav.globalMenuSp ul li a {
     display: block;
-    width: 16px;
-    height: 1px;
-    background: #fff;
-    transform: rotate( 45deg );
- }*/
- /*バツ印線2
- .sp-nav .close::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    display: block;
-    width: 16px;
-    height: 1px;
-    background: #fff;
-    transform: rotate( -45deg );
- }
-*/
+    color: rgb(255, 255, 255);
+    padding: 1em 0;
+    text-decoration :none;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+    transform: translateX(50%);
 }
-
+}
 
 
 header {
-    display: flex;
-    width: 100%;
-    height: 30px;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  padding-bottom:50px;
 }
-   
+
+
 .title-header {
-    margin-right: auto;
-    font-family: 'Hachi Maru Pop', cursive;
-    color: white;
-    font-size:20px;
-    margin-left:10px;
+  margin-right: auto;
+  font-family: 'Hachi Maru Pop', cursive;
+  color: white;
+  font-size: 30px;
+  margin-left:10px;
 }
-   
 
 span{
     display: none;
@@ -151,7 +150,7 @@ a{
     display:block;
     text-decoration: none;
     border-radius: 1px;
-    color: white;
+    color: rgb(0, 0, 0);
     padding:10px 3px;
     text-align: left;
 }
@@ -162,66 +161,50 @@ a{
 /*ヘッダーのcss*/
 
 /*アニメーションのcss*/
-#slide-in-header{
-    opacity: 0;
-    animation-name: slide-in-header;
-    animation-delay: 0.1s;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
 
-@keyframes slide-in-header {
-    0% {
-      opacity: 0;
-        transform: translateY(-30px);
-     }
-    100% {
-      opacity: 1;
-       transform: translateY(0px)
-    }
-}
-
-#slide-in-hamburger{
-   opacity: 0;
-   animation-name: slide-in-hamburger;
-   animation-delay: 0.5s;
-   animation-duration: 0.5s;
-   animation-timing-function: ease-out;
-   animation-fill-mode: forwards;
-}
-@keyframes slide-in-hamburger {
-   0% {
-     opacity: 0;
-       transform: translateX(100px);
-    }
-   100% {
-     opacity: 1;
-      transform: translateX(0px)
-   }
-}
-
-/*アニメーションのcss*/
-
-a {
+.menu-item a {
    position: relative;
    display: inline-block;
    text-decoration: none;
  }
- a::after {
+.menu-item a::after {
    position: absolute;
    bottom: -8px;
    left: 0;
    content: '';
    width: 100%;
    height: 2px;
-   background: rgb(0, 0, 0);
+   background: rgba(0, 0, 0, 0.829);
    opacity: 0;
    visibility: hidden;
-   transition: .3s;
+   transition: .08s;
  }
- a:hover::after {
+.menu-item a:hover::after {
    bottom: -1px;
    opacity: 1;
    visibility: visible;
  }
+
+ /*アニメーションのcss*/
+header.active{
+  opacity: 0;
+  animation-name: slide-in-header;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes slide-in-header {
+  0% {
+    opacity: 0;
+      transform: translateY(-30px);
+   }
+  100% {
+    opacity: 1;
+     transform: translateY(0px)
+  }
+}
+
+h3{
+  font-family: 'Noto Sans JP', sans-serif;
+}
