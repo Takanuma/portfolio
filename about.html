@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ポートフォリオ用のWEBサイト">
-    <title>ポートフォリオ -about me</title>
+    <title>ポートフォリオ -About me</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="hamburger.js"></script>
     <link rel="stylesheet" href="news.css">
@@ -13,24 +13,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+JP:wght@100;900&family=Noto+Serif&display=swap" rel="stylesheet">
-    
-</head>
-<header></header>
 
+</head>
+
+<header>
+  <h1 id="slide-in-header" class="title-header"><a href="index.html">ポートフォリオ</a></h1>
+  <ul id="slide-in-header" class="menu-group">
+      <li class="menu-item"><a href="news.html">News</a></li>
+      <li class="menu-item"><a href="about.html">About me</a></li>
+      <li class="menu-item"><a href="works.html">Works</a></li>
+      <li class="menu-item"><a href="contact.html">Contact</a></li>
+      <li class="menu-item"><a href=https://github.com/Takanuma/portfolio/ target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+</header>
 <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav class="globalMenuSp">
+  <ul>
+      <li class="menu">Menu</li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="works.html">Works222</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href=https://github.com/Takanuma/portfolio/ target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+</nav>
 
 <body>
   <h3>About me</h3>
-
 </html>
-
-<script>
-    $(function(){
-    $.ajaxSetup({cache:false});
-    $("header").load("header.html");
-});
-</script>

@@ -1,9 +1,10 @@
 body{
-    background-color:white;
+    background-color:whitesmoke;
     background-size:auto;
     background-repeat:no-repeat;
     height: 100%;
     position: relative;
+    margin: 0;
 }
 h3{
     text-align: center;

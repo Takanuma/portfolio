@@ -32,6 +32,7 @@ $(window).on('load',function(){
     else{
         console.log("Yes index");
         $('header').toggleClass('active');
+        $('.hamburger').toggleClass('slide');
     }
 
 });

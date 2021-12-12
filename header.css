@@ -23,7 +23,7 @@ nav{
 /*　ハンバーガーボタン　*/
 .menu{
   font-family: 'Hachi Maru Pop', cursive;
-  color:white;
+  color:rgb(0, 0, 0);
   font-size:40px;
 }
 .hamburger {
@@ -81,7 +81,7 @@ nav{
     top  : 0;
     left : 0;
     color: #000;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.9);
     text-align: left;
     transform: translateX(100%);
     transition: ease-in-out 0.2s;
@@ -90,7 +90,7 @@ nav{
   }
   
   nav.globalMenuSp ul {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0);
     margin: 0 auto;
     padding: 0;
     width: 100%;
@@ -101,21 +101,23 @@ nav{
     font-family: 'Hachi Maru Pop', cursive;
     padding-left: 15px;
     width: 100%;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgb(0, 0, 0);
   }
   nav.globalMenuSp ul li:last-child {
     padding-bottom: 0;
     border-bottom: none;
   }
   nav.globalMenuSp ul li:hover{
-    background :rgba(0, 0, 0, 0.5);
+    background :rgba(0, 0, 0, 0.05);
+
   }
   
   nav.globalMenuSp ul li a {
     display: block;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 1em 0;
     text-decoration :none;
+    font-style:bold;
   }
   
   /* このクラスを、jQueryで付与・削除する */
@@ -126,13 +128,17 @@ nav.globalMenuSp.active {
 
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   width: 100%;
   height: 50px;
   align-items: center;
-  padding-bottom:50px;
+  padding-bottom:10px;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26)
 }
-
 
 .title-header {
   margin-right: auto;
@@ -140,6 +146,7 @@ header {
   color: white;
   font-size: 30px;
   margin-left:10px;
+  margin-top: 10;
 }
 
 span{
@@ -187,6 +194,14 @@ a{
 
  /*アニメーションのcss*/
 header.active{
+  opacity: 0;
+  animation-name: slide-in-header;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.hamburger.slide{
   opacity: 0;
   animation-name: slide-in-header;
   animation-delay: 0.1s;
