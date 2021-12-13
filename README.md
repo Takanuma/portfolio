@@ -1,1 +1,1 @@
-https://takanuma.github.io/portfolio/
+https://takanuma.github.io/portfolio/index.html
