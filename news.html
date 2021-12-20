@@ -2,17 +2,19 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ポートフォリオ用のWEBサイト">
-    <title>ポートフォリオ -News</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="hamburger.js"></script>
-    <link rel="stylesheet" href="news.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+JP:wght@100;900&family=Noto+Serif&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ポートフォリオ用のWEBサイト">
+  <title>ポートフォリオ -News</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="hamburger.js"></script>
+  <link rel="stylesheet" href="news.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+JP:wght@100;900&family=Noto+Serif&display=swap"
+    rel="stylesheet">
 
 </head>
 
@@ -27,33 +29,37 @@
 
 <nav class="globalMenuSp">
   <ul>
-      <li class="menu">Menu</li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="about.html">About me</a></li>
-      <li><a href="works.html">Works</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href=https://github.com/Takanuma/portfolio/ target="_blank" rel="noopener">GitHub</a></li>
+    <li class="menu">Menu</li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="about.html">About me</a></li>
+    <li><a href="works.html">Works</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href=https://github.com/Takanuma/portfolio/ target="_blank" rel="noopener">GitHub</a></li>
   </ul>
 </nav>
 
 <body>
+  <div class="body">
   <h3>News</h3>
   <div class="container">
     <div class="item">
-      <a href="#"><img class="item-img" src="news2.png"></a> 
+      <a href="#"><img class="item-img" src="news2.png"></a>
       <p>ゲーム開発中 2021/12/11</p>
     </div>
     <div class="item">
-      <a href="#"><img class="item-img" src="news1.png"></a> 
+      <a href="#"><img class="item-img" src="news1.png"></a>
       <p>ポートフォリオ公開 2021/12/09</p>
     </div>
-    </div>
   </div>
+  </div>
+</div>
+</body>
+
 </html>
 
 <script>
-    $(function(){
-    $.ajaxSetup({cache:false});
+  $(function () {
+    $.ajaxSetup({ cache: false });
     $("header").load("header.html");
-});
+  });
 </script>

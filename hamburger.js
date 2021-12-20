@@ -1,7 +1,6 @@
 $(function() {
     $('.hamburger').click(function() {
         $(this).toggleClass('active');
- 
         if ($(this).hasClass('active')) {
             $('.globalMenuSp').addClass('active');
         } else {
@@ -13,12 +12,18 @@ $(function() {
 
 // クリックイベント全てに対しての処理
 $(document).on('click touchend', function(event) {
+    console.log(event.target);
     // 表示したポップアップ以外の部分をクリックしたとき
-    if (!$(event.target).closest('.hamburger').length) {
-        if ($('.hamburger').hasClass('active')){
+    if (!$(event.target).closest('.hamburger').length){
+        if(!$(event.target).closest('.globalMenuSp.active').length){
+            console.log("ul");
+        }else if ($('.hamburger').hasClass('active')){
+            console.log("sakuse");
             $('.hamburger').toggleClass('active');
             $('.globalMenuSp').removeClass('active');
         }
+    }else{
+        console.log("ham");
     }
 });
 
