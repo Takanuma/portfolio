@@ -1,0 +1,263 @@
+@media screen and (min-height: 0px) {
+	/* 0px以上に適用されるCSS（スマホ用） */
+    #wrapper{
+        justify-content:baseline;
+    }
+
+}
+@media screen and (min-height: 550px) {
+	/* 550px以上に適用されるCSS（その他用） */
+    #wrapper{
+        justify-content:center;
+        margin-bottom:0px;
+        height: 100vh;
+    }
+}
+
+/*フッターのcss*/
+/*フッターのcss*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(https://raw.githubusercontent.com/Takanuma/portfolio/main/back.webp);
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#title{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 100;
+}
+.link-text{
+    font-size: 17px;
+    font-weight: 100;
+}
+#logo-text{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size:30px;
+}
+
+#view-clock{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 15px;
+}
+
+#main-li{
+    text-align-last: justify;
+    font-family: 'Hachi Maru Pop', cursive; 
+}
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    /*width: 100vw;*/
+    align-items: center;
+}
+
+#Content-container{
+    display:flex;
+    flex-direction: column;
+    padding: 50px;
+    color:whitesmoke;
+    align-items:center;
+
+    transform: translate(0%, 0%);
+}
+
+
+nav{
+    padding-left: 0px;
+}
+
+#main-nav{
+    margin-bottom: 33px;
+    display: block;
+    box-sizing: border-box;
+    flex-wrap:wrap;
+}
+
+#main-nav ul li {
+    width: 100%;
+    height: 100%;
+    /*border:1px solid rgb(255, 255, 255);*/
+
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    display:block;
+    text-decoration: none;
+    border-radius: 1px;
+    color: inherit;
+    padding:10px 3px;
+    text-align: left;
+}
+
+nav ul li a:hover{
+    list-style-type: none;
+}
+
+
+/*以下アニメーション*/
+/*左からタイトルがフェードイン*/
+.fade-in-title {
+    opacity: 0;
+    animation-name: fade-in-title;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+ }
+
+/*左から時間がフェードイン*/
+.fade-in-clock {
+    opacity: 0;
+    animation-name: fade-in-title;
+    animation-delay: 0.1s;
+    animation-duration: 0.65s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+ }
+
+@keyframes fade-in-title {
+    30% {
+        opacity: 0;
+        transform: translateY(20px);
+     }
+    100% {
+       opacity: 1;
+       transform: translateY(0px)
+    }
+}
+
+/*左から要素が順番にフェードイン*/
+.fade-in-li1 {
+    opacity: 0;
+    animation-name: fade-in-li;
+    animation-delay: 0.3s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+ }
+ 
+.fade-in-li2 {
+    opacity: 0;
+    animation-name: fade-in-li;
+    animation-delay: 0.35s;
+    animation-duration: 0.45s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+ }
+
+.fade-in-li3 {
+    opacity: 0;
+    animation-name: fade-in-li;
+    animation-delay: 0.4s;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-li4 {
+    opacity: 0;
+    animation-name: fade-in-li;
+    animation-delay: 0.55s;
+    animation-duration: 0.35s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+ }
+
+.fade-in-li5 {
+    opacity: 0;
+    animation-name: fade-in-li;
+    animation-delay: 0.6s;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+ }
+
+.fade-in-li6 {
+    opacity: 0;
+    animation-name: fade-in-li;
+    animation-delay: 0.75s;
+    animation-duration: 0.35s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+ }
+
+@keyframes fade-in-li {
+    30% {
+        opacity: 0;
+        transform: translateX(-20px);
+     }
+    100% {
+       opacity: 1;
+       transform: translateX(0px)
+    }
+}
+/*左からタイトルがフェードイン*/
+
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+  a::after {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: rgba(230, 230, 230, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: .08s;
+  }
+  a:hover::after {
+    bottom: -1px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+ 
+
+body {
+    transition: all 1s;
+}
+
+.bodyfadeout {
+    opacity: 0;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    background-color: coral;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    transition: all 1s;
+}
+ 
+.bodyfadeout {
+    opacity: 0;
+}
+ 

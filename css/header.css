@@ -1,0 +1,251 @@
+/*ヘッダーのcss*/
+@media screen and (min-width: 760px) {
+	/* 300px以上に適用されるCSS（PC用） */
+.menu-item {
+        list-style: none;
+        display: inline-block;
+        padding-right:50px;
+        padding: 10px;
+        font-size:15px;
+        opacity: 0px;
+}
+nav{
+  display: none;
+}
+
+}
+@media screen and (max-width: 760px) {
+	/* 700px以上に適用されるCSS（スマホ用） */
+.menu-item {
+  display: none;
+}
+
+/*　ハンバーガーボタン　*/
+.menu{
+  font-family: 'Hachi Maru Pop', cursive;
+  color:rgb(0, 0, 0);
+  font-size:40px;
+}
+.hamburger {
+    
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : rgb(0, 0, 0);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2){
+    top: 16px;
+    opacity:0;
+    transition: 0.15s;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #000;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transform: translateX(100%);
+    transition: ease-in-out 0.2s;
+    width: 100%;
+    height:100%;
+  }
+  
+  nav.globalMenuSp ul {
+    transform: translateX(50%);
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height:100%;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    font-family: 'Hachi Maru Pop', cursive;
+    padding-left: 15px;
+    width: 100%;
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :rgb(175, 175, 175);
+
+  }
+  
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 1em 0;
+    text-decoration :none;
+    font-style:bold;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+    transform: translateX(0%);
+}
+}
+
+
+header {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  padding-bottom:10px;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26)
+}
+
+.title-header {
+  margin-right: auto;
+  font-family: 'Hachi Maru Pop', cursive;
+  color: white;
+  font-size: 30px;
+  margin-left:10px;
+  margin-top: 10;
+}
+
+span{
+  
+    display: none;
+}
+
+a{
+    display:block;
+    text-decoration: none;
+    border-radius: 1px;
+    color: rgb(0, 0, 0);
+    padding:10px 3px;
+    text-align: left;
+}
+
+.menu-item{
+    font-family: 'Hachi Maru Pop', cursive;
+}
+/*ヘッダーのcss*/
+
+/*アニメーションのcss*/
+
+.menu-item a {
+   position: relative;
+   display: inline-block;
+   text-decoration: none;
+ }
+.menu-item a::after {
+   position: absolute;
+   bottom: -8px;
+   left: 0;
+   content: '';
+   width: 100%;
+   height: 2px;
+   background: rgba(0, 0, 0, 0.829);
+   opacity: 0;
+   visibility: hidden;
+   transition: .08s;
+ }
+.menu-item a:hover::after {
+   bottom: -1px;
+   opacity: 1;
+   visibility: visible;
+ }
+
+ /*アニメーションのcss*/
+header.active{
+  opacity: 0;
+  animation-name: slide-in-header;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.hamburger.slide{
+  opacity: 0;
+  animation-name: slide-in-header;
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes slide-in-header {
+  0% {
+    opacity: 0;
+      transform: translateY(-30px);
+   }
+  100% {
+    opacity: 1;
+     transform: translateY(0px)
+  }
+}
+
+h3{
+  margin-top:100px;/*仮でh3用の場所確保*/
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*スクロールバー*/
+::-webkit-scrollbar {
+  width: 18px;                
+  background-color: #f9f9f9;  
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;                   
+  box-shadow: inset 0 0 10px 10px #5e5e5e; 
+  border: solid 4px transparent;       
+}
+
